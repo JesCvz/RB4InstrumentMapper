@@ -25,6 +25,7 @@ namespace RB4InstrumentMapper.GUI
             _pollingFrequency = BackendSettings.ClampPollingFrequency(Settings.Default.pollingFrequency);
 
             pollingFrequencyTextBox.Text = _pollingFrequency.ToString();
+            riffmasterTiltSensitivity.Value = Settings.Default.riffmasterTiltSensitivity;
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -48,7 +49,8 @@ namespace RB4InstrumentMapper.GUI
             Settings.Default.autoStart = autoStartCheckBox.IsChecked.GetValueOrDefault();
             Settings.Default.accurateDrumMaps = accurateDrumMapsCheckBox.IsChecked.GetValueOrDefault();
             Settings.Default.pollingFrequency = _pollingFrequency;
-
+            Settings.Default.riffmasterTiltSensitivity = riffmasterTiltSensitivity.Value;
+            
             Close();
         }
 

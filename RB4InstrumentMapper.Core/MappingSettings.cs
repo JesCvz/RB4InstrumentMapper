@@ -34,6 +34,11 @@ namespace RB4InstrumentMapper.Core
         public static bool LogPackets { get; set; } = false;
 
         /// <summary>
+        /// Riffmaster tilt sensitivity.
+        /// </summary>
+        public static double RiffmasterSensitivity { get; set; } = 1.5;
+
+        /// <summary>
         /// Clamps the polling frequency value to an acceptable range.
         /// </summary>
         public static uint ClampPollingFrequency(uint frequency)

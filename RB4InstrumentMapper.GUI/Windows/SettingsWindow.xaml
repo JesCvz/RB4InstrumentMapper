@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RB4InstrumentMapper.GUI"
         mc:Ignorable="d"
         Title="Settings"
-        Height="160" Width="350"
+        Height="200" Width="350"
         ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
         Loaded="Window_Loaded" Closed="Window_Closed"
         MouseDown="Window_MouseDown">
@@ -19,6 +19,8 @@
             ToolTip="How fast to poll for inputs in the GameInput backend. May be any value between 60 hz and 500 hz."/>
         <TextBox x:Name="pollingFrequencyTextBox" Margin="164,42,0,0" Width="35" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" LostKeyboardFocus="pollingFrequencyTextBox_LostKeyboardFocus"
             ToolTip="{Binding ElementName=pollingFrequencyLabel, Path=ToolTip}"/>
+        <Label Margin="0, 64, 0, 0" Padding="0, 0, 0, 0" BorderThickness="0">Riffmaster Overdrive Sensitivity</Label>
+        <Slider x:Name="riffmasterTiltSensitivity" Margin="0, 86, 0, 0" Minimum="1" Maximum="2"></Slider>
 
         <Button x:Name="saveButton" Content="Save" Height="25" Width="75" Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="saveButton_Click"/>
         <Button x:Name="cancelButton" Content="Cancel" Height="25" Width="75" Margin="0,0,85,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="cancelButton_Click"/>
